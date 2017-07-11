@@ -1,0 +1,55 @@
+{
+  "name": "Typescript_Cucumber_Appium",
+  "version": "0.0.0",
+  "description": "Typescript Cucumber Appium automation skeleton",
+  "main": "index.js",
+  "author": "Colin Skow",
+  "license": "ISC",
+  "dependencies": {
+    "@types/glob": "5.0.30",
+    "@types/lodash": "4.14.62",
+    "appium": "1.6.5",
+    "auto-emulate": "0.0.2",
+    "better-npm-run": "0.0.15",
+    "chai": "4.0.2",
+    "core-js": "2.4.1",
+    "cucumber": "2.3.0",
+    "glob": "7.1.2",
+    "selenium-webdriver": "3.4.0",
+    "ts-node": "3.0.6",
+    "tslint": "5.4.3",
+    "typescript": "2.3.4",
+    "webdriverio": "4.7.1"
+  },
+  "devDependencies": {
+    "@types/chai": "4.0.0",
+    "@types/core-js": "0.9.41",
+    "@types/cucumber": "2.0.1",
+    "@types/node": "7.0.29",
+    "@types/selenium-webdriver": "3.0.4",
+    "@types/webdriverio": "4.7.0",
+    "appium-doctor": "1.4.2",
+    "cucumber-html-reporter": "^2.0.1",
+    "npm-run-all": "4.0.2"
+  },
+  "scripts": {
+    "appium": "appium",
+    "appium-kill": "kill $(ps aux | grep '[.]bin/appium' | awk '{print $2}')",
+    "cucumber": "cucumber-js src/features --compiler ts:ts-node/register",
+    "cucumber:report": "cucumber-js src/features --compiler ts:ts-node/register --format json > run_results/results.json",
+    "emulate": "ts-node scripts/emulate.ts",
+    "emulator-kill": "adb -s emulator-5554 emu kill",
+    "tslint": "tslint -c .tslint.json -t verbose './**/*.ts' -e './node_modules/**/*'",
+    "test:android": "bnr test:android -s"
+  },
+  "betterScripts": {
+    "test:android": {
+      "command": "npm run cucumber",
+      "env": {
+        "TRANSMITTER_ID": "T0005952",
+        "DEVICE_NAME": "AndroidS7",
+        "CAPABILITY": "Android"
+      }
+    }
+  }
+}
