@@ -5,6 +5,8 @@ export class Constants {
     public static readonly ANDROID = 'Android'
     public static readonly IPHONE = 'iOS'
 
+    public static readonly SCREENSHOT_DIRECTORY = './run_results/screenshots'
+
     public static readonly monthNames = [
         "January", "February", "March",
         "April", "May", "June", "July",

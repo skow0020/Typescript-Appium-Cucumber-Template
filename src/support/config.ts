@@ -1,4 +1,4 @@
 export const localhost = {
-  host: 'localhost',
-  port: 4723
+    host: 'localhost',
+    port: 4723
 };

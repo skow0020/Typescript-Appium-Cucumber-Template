@@ -399,4 +399,8 @@ export const getScreenshotDirectory = () => {
     if (!fs.existsSync(languageScreenshotDir)) { fs.mkdirSync(languageScreenshotDir) }
     return languageScreenshotDir
 }
+
+export const navigateToLoginPage = () => {
+    //TO BE COMPLETED
+}
 export default selectors;
